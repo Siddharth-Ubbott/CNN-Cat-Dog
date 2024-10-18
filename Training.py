@@ -24,9 +24,3 @@ if __name__ == "__main__":
     model = build_model()
     model.fit(train_generator, epochs=10)
     model.save('models/cat_dog_classifier.h5')
-
-    
-    img = image.load_img(img_path, target_size=(64, 64))
-    img_array = image.img_to_array(img) / 255.0
-    return np.expand_dims(img_array, axis=0)
-
